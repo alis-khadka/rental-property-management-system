@@ -23,7 +23,7 @@ CREATE TABLE `properties` (
     `rental_rate` int,
     `available` tinyint(1),
     INDEX `index_properties_on_landlord_id` (`landlord_id`),
-    CONSTRAINT `fk_rails_0d583945c1` FOREIGN KEY (`landlord_id`) REFERENCES `landlords` (`id`)
+    CONSTRAINT `properties_landlord_id_contraint` FOREIGN KEY (`landlord_id`) REFERENCES `landlords` (`id`)
 );
 
 CREATE TABLE `leases` (
@@ -35,8 +35,8 @@ CREATE TABLE `leases` (
     `status` tinyint(1),
     INDEX `index_leases_on_property_id` (`property_id`),
     INDEX `index_leases_on_tenant_id` (`tenant_id`),
-    CONSTRAINT `fk_rails_170c7116c8` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`),
-    CONSTRAINT `fk_rails_40598ae6e6` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`)
+    CONSTRAINT `leases_properties_id_contraint` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`),
+    CONSTRAINT `leases_tenants_id_constraint` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`)
 );
 
 CREATE TABLE `payments` (
@@ -45,7 +45,7 @@ CREATE TABLE `payments` (
     `payment_date` datetime(6),
     `amount` float(24),
     INDEX `index_payments_on_lease_id` (`lease_id`),
-    CONSTRAINT `fk_rails_b77711b98f` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
+    CONSTRAINT `payments_lease_id_constraint` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
 );
 
 CREATE TABLE `maintenance_requests` (
@@ -55,7 +55,7 @@ CREATE TABLE `maintenance_requests` (
     `description` text,
     `status` tinyint(1),
     INDEX `index_maintenance_requests_on_lease_id` (`lease_id`),
-    CONSTRAINT `fk_rails_41679b1432` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
+    CONSTRAINT `maintenance_requests_lease_id_constraint` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
 )
 
 CREATE TABLE `violations` (
@@ -65,5 +65,5 @@ CREATE TABLE `violations` (
     `description` text,
     `status` tinyint(1),
     INDEX `index_violations_on_lease_id` (`lease_id`),
-    CONSTRAINT `fk_rails_c417e62b1e` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
+    CONSTRAINT `violations_lease_id_constraint` FOREIGN KEY (`lease_id`) REFERENCES `leases` (`id`)
 );
