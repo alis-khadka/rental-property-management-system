@@ -18,6 +18,6 @@ source $path/sql/data_population/violations.sql;
 
 -- And finally, these perform actions on our created test data to demonstrate database usage
 
-SELECT payment_date FROM payments WHERE (lease_id = 30);
+-- SELECT payment_date FROM payments WHERE (lease_id = 30);
 
 -- etc (add a bunch of these
