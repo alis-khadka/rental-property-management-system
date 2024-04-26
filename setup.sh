@@ -28,4 +28,7 @@ echo -e "source $dir_path/sql/schema.sql;\n\n\n"
 echo -e "Use the below command to run the different DML queries.\n\n"
 echo -e "source $dir_path/sql/DML.sql;\n\n\n"
 
+echo -e "Run the following command for some select sql.\n\n"
+echo -e "source $dir_path/sql/queries.sql;\n\n\n"
+
 echo -e "!!!CHEERS!!!\n\n"
