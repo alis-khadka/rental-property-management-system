@@ -22,4 +22,7 @@ echo -e "\n\n!!! The final execution file is ready. (location = root_dir/sql/sql
 echo -e "Go into the mysql console and run the following command.\n\n"
 echo -e "source $dir_path/sql/sql_exec_final.sql;\n\n\n"
 
+echo -e "Run the following command for some select sql.\n\n"
+echo -e "source $dir_path/sql/queries.sql;\n\n\n"
+
 echo -e "!!!CHEERS!!!\n\n"

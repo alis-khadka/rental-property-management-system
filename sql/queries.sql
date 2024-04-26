@@ -82,12 +82,3 @@ From tenants;
 -- RETURN THE LOWEST AMOUNT PAID IN ONE PAYMENT DATE AND THE HIGHEST AMOUNT PAID IN ONE PAYMENT DATE
 Select Min(amount), Max(amount)
 From payments;
-
-
-
-
-
-
-
-
-
