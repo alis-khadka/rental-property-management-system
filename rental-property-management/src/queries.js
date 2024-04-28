@@ -159,7 +159,7 @@ export const queries = {
     query11: {
         displayText: "Query 11: Name Of Landlords thats starts with B, L, OR V (case insensitive)",
         sqlQuery: `Select name
-                From landlord
+                From landlords
                 Where LEFT(name, 1) IN ('b', 'l', 'v', 'B', 'L', 'V');`
     },
     query12: {
