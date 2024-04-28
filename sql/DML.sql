@@ -110,9 +110,9 @@ JOIN
 JOIN 
   maintenance_requests mr ON l.id = mr.lease_id
 GROUP BY 
-  p.id;
+  p.id
 ORDER BY
-  latest_request_date;
+  latest_request_date DESC;
 
 
 -- 7 -- 

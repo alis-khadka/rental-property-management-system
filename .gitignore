@@ -1,1 +1,28 @@
 /sql/sql_exec_final.sql
+
+# Logs
+rental-property-management/logs
+rental-property-management/*.log
+rental-property-management/npm-debug.log*
+rental-property-management/yarn-debug.log*
+rental-property-management/yarn-error.log*
+rental-property-management/pnpm-debug.log*
+rental-property-management/lerna-debug.log*
+
+rental-property-management/node_modules
+rental-property-management/dist
+rental-property-management/dist-ssr
+rental-property-management/*.local
+
+backend/node_modules
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
