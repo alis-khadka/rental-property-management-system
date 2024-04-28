@@ -13,6 +13,7 @@ rental-property-management/node_modules
 rental-property-management/dist
 rental-property-management/dist-ssr
 rental-property-management/*.local
+rental-property-management/.vite
 
 backend/node_modules
 
@@ -26,3 +27,4 @@ backend/node_modules
 *.njsproj
 *.sln
 *.sw?
+
