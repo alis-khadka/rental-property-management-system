@@ -14,9 +14,9 @@ app.use((req, res, next) => {
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "S@m.sql.pw22",
-  database: "rental_db",
+  user: "project",
+  password: "password",
+  database: "sammy",
 });
 
 app.use(express.json());
@@ -34,10 +34,17 @@ app.post("/executeQuery", (req, res) => {
   db.query(sqlQuery, (err, result) => {
     if (err) {
       console.error("Error executing query:", err);
-      return res.status(500).json({ error: "Internal server error" });
+      return res.json({
+        success: false,
+        data: err
+    });
     }
 
-    return res.json(result);
+    console.log('result', result);
+    return res.json({
+      success: true,
+      data: result
+    });
   });
 });
 

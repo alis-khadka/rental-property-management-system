@@ -98,3 +98,21 @@ button:hover {
 .query-table tr:hover {
   background-color: #ddd; /* Hover effect */
 }
+
+.error-box {
+  background-color: #fff;
+  color: #f00;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.message-box {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 50px;
+  border-radius: 20px;
+}
